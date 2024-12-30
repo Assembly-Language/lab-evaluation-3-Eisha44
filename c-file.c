@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 
 
@@ -8,7 +7,7 @@
 extern "C" {
 #endif
 
-void __stdcall asmfunc(void);
+void __stdcall asmfunc(int arr[],int length );
 
 #ifdef __cplusplus
 }
@@ -18,18 +17,18 @@ void __stdcall asmfunc(void);
 int main() {
     system("cls");
     int abc;
-    printf("Summing the odd numbers \n");
+    printf("Sum of odd numbers \n");
 getch();
-
+    int arr[7] = {1,2,3,4,5,6,7};
     
-    asmfunc(); //assembly proc calling
+    
+     asmfunc(arr,7); 
    
    getch();
     
     
-    printf("back to  C! \n"); // printing in c
-    
+    printf("back to  C! \n"); 
   
     
-    return 0;
+return 0;
 }
