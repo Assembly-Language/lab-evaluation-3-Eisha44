@@ -8,7 +8,7 @@
 extern "C" {
 #endif
 
-void __stdcall asmfunc(int p1 ,int p2);
+void __stdcall asmfunc(void);
 
 #ifdef __cplusplus
 }
@@ -18,11 +18,11 @@ void __stdcall asmfunc(int p1 ,int p2);
 int main() {
     system("cls");
     int abc;
-    printf("assembly proc calling from  from C! \n");
+    printf("Summing the odd numbers \n");
 getch();
 
     
-    asmfunc(3,5); //assembly proc calling
+    asmfunc(); //assembly proc calling
    
    getch();
     
